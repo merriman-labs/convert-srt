@@ -1,4 +1,4 @@
-# SRT Converter ![npm (scoped)](https://img.shields.io/npm/v/@johnny.reina/convert-srt)
+# SRT Converter [![npm (scoped)](https://img.shields.io/npm/v/@johnny.reina/convert-srt)](https://www.npmjs.com/package/@johnny.reina/convert-srt)
 *Convert .srt subtitle files to JavaScript objects*
 
 ## Installing
