@@ -28,5 +28,9 @@
   "files": [
     "LICENSE",
     "dist/"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jreina/convert-srt"
+  }
 }
