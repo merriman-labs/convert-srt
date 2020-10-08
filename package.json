@@ -1,6 +1,6 @@
 {
   "name": "@johnny.reina/convert-srt",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Convert SRT file to JS objects",
   "main": "dist/index.js",
   "scripts": {
