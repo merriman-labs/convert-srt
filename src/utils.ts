@@ -6,10 +6,18 @@ import { Subtitle } from "./types";
  */
 export function parseChunk([index, times, ...text]: Array<string>): Subtitle {
   const [from, to] = times.split(" --> ");
+  const [fromSec, fromMs] = from.split(",");
+  const [toSec, toMs] = to.split(",");
   return {
     index: parseInt(index, 10),
-    from,
-    to,
+    from: {
+      timestamp: fromSec,
+      ms: fromMs,
+    },
+    to: {
+      timestamp: toSec,
+      ms: toMs,
+    },
     text: text.join("\n"),
   };
 }
@@ -38,4 +46,11 @@ export function splitChunks(items: Array<string>): Array<Array<string>> {
  */
 export function last<T>(arr: Array<T>) {
   return arr[arr.length - 1];
+}
+
+export function formatWebVTT({ index, from, to, text }: Subtitle): string {
+  return `${index}
+${from.timestamp}.${from.ms} --> ${to.timestamp}.${to.ms}
+${text}
+`;
 }

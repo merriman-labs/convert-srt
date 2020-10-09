@@ -14,8 +14,15 @@ describe("fromSrt", () => {
     it("Should produce a valid subtitle objects", () => {
       actual.forEach(({ index, from, to, text }) => {
         expect(index).to.be.a("number");
-        expect(from).to.be.a("string");
-        expect(to).to.be.a("string");
+        expect(from).to.be.an("object");
+        expect(from).to.have.all.keys('timestamp', 'ms');
+        expect(from.ms).to.be.a('string');
+        expect(from.timestamp).to.be.a('string');
+
+        expect(to).to.be.an("object");
+        expect(to).to.have.all.keys('timestamp', 'ms');
+        expect(to.ms).to.be.a('string');
+        expect(to.timestamp).to.be.a('string');
         expect(text).to.be.a("string");
       });
     });
