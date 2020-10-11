@@ -11,6 +11,10 @@ npm i @johnny.reina/convert-srt
 ### `toSrt(srt: string): Array<Subtitle>`
 The main export of this package. Accepts the string contents of a `.srt` file and returns an array of `Subtitle` objects.
 
+
+### `toWebVTT(subs: Array<Subtitle>): string`
+Accepts an array of `Subtitle` objects and returns a WebVTT string.
+
 ### `Subtitle`
 ```typescript
 interface Subtitle {
